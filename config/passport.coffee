@@ -10,8 +10,6 @@
  # http://passportjs.org/guide/providers/
 
 module.exports.passport =
-    local:
-        strategy: require('passport-local').Strategy
 
     twitch:
         name: 'twitch'
