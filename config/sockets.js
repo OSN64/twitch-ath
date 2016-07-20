@@ -122,10 +122,15 @@ module.exports.sockets = {
   * disconnects                                                              *
   *                                                                          *
   ***************************************************************************/
-  // afterDisconnect: function(session, socket, cb) {
-  //   // By default: do nothing.
-  //   return cb();
-  // },
+  afterDisconnect: function(session, socket, cb) {
+
+    // console.log(session,socket)
+    // if(session.user && session.user.id)
+    //     clearInterval(sails.twitchTimers[user.id]['followers'])
+    //     delete sails.twitchTimers[user.id]['followers']
+    // By default: do nothing.
+    return cb();
+  },
 
   /***************************************************************************
   *                                                                          *

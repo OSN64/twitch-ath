@@ -19,3 +19,5 @@
 module.exports.policies =
 
   '*': 'passport'
+  'follow': true
+  'socket': 'isSocket'

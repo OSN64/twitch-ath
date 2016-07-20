@@ -23,12 +23,16 @@ module.exports.routes =
 
     '/': 'Home.index'
 
-    'post /register': 'UserController.create'
-    'get /logout': 'AuthController.logout'
+    'post /register': 'User.create'
+    'get /logout': 'Auth.logout'
 
-    'post /auth/local': 'AuthController.callback'
-    'post /auth/local/:action': 'AuthController.callback'
+    'post /auth/local': 'Auth.callback'
+    'post /auth/local/:action': 'Auth.callback'
 
-    'get /auth/:provider': 'AuthController.provider'
-    'get /auth/:provider/callback': 'AuthController.callback'
-    'get /auth/:provider/:action': 'AuthController.callback'
+    'get /auth/:provider': 'Auth.provider'
+    'get /auth/:provider/callback': 'Auth.callback'
+    'get /auth/:provider/:action': 'Auth.callback',
+
+    'get /follow/:authID': 'Follow.index'
+    'get /socket/register': 'Auth.registerSocket'
+    'get /socket/follow/preload': 'Follow.preload'

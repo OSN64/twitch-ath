@@ -3,6 +3,13 @@
 var _ = require('lodash');
 var crypto = require('crypto');
 
+function genMD5Hash (seed) {
+    seed = seed || new Date().toString()
+    var md5 = crypto.createHash('md5');
+    md5.update(seed);
+    return md5.digest('hex');
+}
+
 /** @module User */
 module.exports = {
   attributes: {
@@ -21,11 +28,13 @@ module.exports = {
       collection: 'Passport',
       via: 'user'
     },
+    authID: {
+        type: 'string',
+        defaultsTo: genMD5Hash()
+    },
 
     getGravatarUrl: function getGravatarUrl() {
-      var md5 = crypto.createHash('md5');
-      md5.update(this.email || '');
-      return 'https://gravatar.com/avatar/' + md5.digest('hex');
+      return 'https://gravatar.com/avatar/' + genMD5Hash(this.email)
     },
 
     toJSON: function toJSON() {

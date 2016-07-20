@@ -1,4 +1,4 @@
-# twitch-auth
+# twitch-pilot
 
 a [Sails](http://sailsjs.org) application
 
@@ -8,3 +8,8 @@ a [Sails](http://sailsjs.org) application
 - passport-twitch
 
 api/services/passport line 98 is where we have been authenticated
+
+
+follow.index.ejs
+<%# Load js  %>
+<%# layouts %>

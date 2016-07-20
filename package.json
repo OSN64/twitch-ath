@@ -26,7 +26,8 @@
     "passport-twitch": "^1.0.3",
     "rc": "1.0.1",
     "sails": "~0.12.3",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "twitch-api": "^0.4.3"
   },
   "scripts": {
     "debug": "node debug app.js",

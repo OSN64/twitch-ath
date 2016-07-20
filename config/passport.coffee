@@ -16,7 +16,7 @@ module.exports.passport =
         protocol: 'oauth2'
         strategy: require('passport-twitch').Strategy
         options:
-            clientID: 'XXXX'
-            clientSecret: 'XXXXX'
+            clientID: 'xxxx'
+            clientSecret: 'xxx'
             callbackURL: "http://example.com/auth/twitch/callback"
-            scope: "user_read"
+            scope: ["user_read", "channel_subscriptions", "channel_commercial"]
